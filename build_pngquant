@@ -1,0 +1,7 @@
+#!/bin/bash  
+
+if hash emcc 2>/dev/null; then
+	EMCC="emcc"
+fi
+
+ $EMCC -O3 --memory-init-file 0 -s ALLOW_MEMORY_GROWTH=0 -s EXPORTED_FUNCTIONS="['_liq_attr_create', '_liq_image_create_rgba','_liq_quantize_image', '_liq_write_remapped_image', '_liq_get_palette', '_liq_attr_destroy', '_liq_image_destroy','_liq_result_destroy']" --llvm-lto 1 -s NO_FILESYSTEM=1 -s TOTAL_MEMORY=67108864 ./lib/pngquant/lib/*.c -o ./build/libimagequant.js
