@@ -1,0 +1,6 @@
+[submodule "lib/CanvasTool.PngEncoder"]
+	path = lib/CanvasTool.PngEncoder
+	url = https://github.com/ryanackley/CanvasTool.PngEncoder.git
+[submodule "lib/pngquant"]
+	path = lib/pngquant
+	url = https://github.com/pornel/pngquant.git
